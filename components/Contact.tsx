@@ -1,5 +1,5 @@
 import React from 'react';
-import { PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, LinkedinIcon } from './Icons';
+import { PhoneIcon, MailIcon, InstagramIcon, FacebookIcon, TwitterIcon, LinkedinIcon } from './Icons.tsx';
 
 const Contact: React.FC = () => {
   return (
