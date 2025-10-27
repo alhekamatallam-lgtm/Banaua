@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { MenuIcon, XIcon } from './Icons.tsx';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  logoUrl: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ logoUrl }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -26,7 +30,7 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between">
             <div className="flex-shrink-0">
               <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                <img className="h-12 w-auto" src="https://uc3a88e1fde5404293f154900ec4.previews.dropboxusercontent.com/p/thumb/ACzC5nlOwatZrnPV4YT0bkC5gdbgAWZiE2OJHRCzDdLe--wJHMHiUD-hgeRFkCVZkfCSw6EvzJYtJfSMWWSyCsMPC4wlJM5IjznCdKwfJVw9wTPdxhgjFSFaC79i6lqeDtRx-4zynQyzE9WEq5eQJso2HmsccGVcOeWh14NsuIotnJM12jd0JNNNsNQ6wLOzPGH1EoBQ0c9eB2Qv7HV-oYvtqqU-Bk4Tn0fH5U-z1F-hqyNC9BMNck90kUSKnYEYLjihclJShNTN0518qo5qN9wBR4YLf-dCJfL8UMqvx7xnWIZ1fc_VJflAJa5JuWkQ7mMjrP1JeLsPwHI0Lne0r9D6_7t-0LQcViflThZj9M8M5g/p.png" alt="شعار ديزاين.كو" />
+                {logoUrl && <img className="h-12 w-auto" src={logoUrl} alt="شعار الشركة" />}
               </a>
             </div>
             {/* Desktop Navigation */}
