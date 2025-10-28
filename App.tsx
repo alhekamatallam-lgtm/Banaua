@@ -20,8 +20,8 @@ const App: React.FC = () => {
         const result = await response.json();
         if (result.success && result.data.logo && result.data.logo.length > 0) {
           const originalUrl = result.data.logo[0].logo;
-          // Modify Dropbox URL for direct embedding
-          const directUrl = originalUrl.replace('www.dropbox.com', 'dl.dropboxusercontent.com').split('&dl=0')[0];
+          // Modify Dropbox URL for direct embedding by using raw=1
+          const directUrl = originalUrl.replace('dl=0', 'raw=1');
           setLogoUrl(directUrl);
         } else {
           throw new Error('لم يتم العثور على الشعار في البيانات');
