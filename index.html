@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>الموقع تحت الإنشاء</title>
+    <title>شركة ديكور للتصميم الداخلي</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -22,12 +22,18 @@
         font-family: 'Cairo', sans-serif;
       }
     </style>
-  </head>
-  <body class="bg-gray-100 flex items-center justify-center h-screen text-gray-800">
-    <div class="text-center p-10 bg-white shadow-2xl rounded-lg border-t-4 border-brand">
-      <h1 class="text-4xl md:text-5xl font-bold text-brand mb-4">الموقع تحت الإنشاء</h1>
-      <p class="text-lg text-gray-600 mb-6">نحن نعمل حالياً على تحديثات هامة. سنعود قريباً!</p>
-      <div class="w-24 h-1 bg-brand mx-auto"></div>
-    </div>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 text-gray-800">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
